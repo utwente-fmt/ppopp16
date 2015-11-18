@@ -40,8 +40,14 @@ create_results() {
     fi
 }
 
-# create necessary files
+# create necessary folders and files
 init() {
+    if [ ! -d "${FAILFOLDER}" ]; then
+      mkdir "${FAILFOLDER}"
+    fi
+    if [ ! -d "${BENCHDIR}/results" ]; then
+      mkdir "${BENCHDIR}/results"
+    fi
     touch ${TMPFILE}
     create_results ${RESULTS_BEEM}
     create_results ${RESULTS_BEEM_SELECTED}
