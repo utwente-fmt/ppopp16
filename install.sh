@@ -1,8 +1,8 @@
 
 
 # Fetch LTSmin from github, configure and build.
-git clone https://github.com/vbloemen/ltsmin.git -b vincent3
 prefix=`pwd`
+git clone https://github.com/vbloemen/ltsmin.git -b vincent3
 cd ltsmin
 git submodule update --init
 ./ltsminreconf
@@ -11,6 +11,7 @@ make && make install
 
 
 # Fetch hong-ufscc from github and make.
+cd "${prefix}"
 git clone https://github.com/vbloemen/hong-ufscc.git
 cd hong-ufscc
 make
