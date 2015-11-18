@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # binaries
 BEEM_SCC="dve2lts-mc"
