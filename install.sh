@@ -4,7 +4,7 @@
 prefix=`pwd`
 mkdir install
 installdir="${prefix}"/install
-export PATH=$PATH:"${installdir}"
+export PATH=$PATH:"${installdir}":"${installdir}"/bin
 
 # install patched DiVinE
 cd "${prefix}"
