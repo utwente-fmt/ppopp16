@@ -292,7 +292,7 @@ init
 
 
 # performs all experiments N times
-do_all_experiments 1
+do_all_experiments 10
 
 
 
