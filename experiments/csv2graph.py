@@ -16,7 +16,7 @@ mintime      = sys.float_info.max
 maxtime      = -1
 minspeedup   = sys.float_info.max
 maxspeedup   = -1
-maxworkers   = 1 
+maxworkers   = 1
 IS_SPEEDUP   = False
 
 
@@ -35,9 +35,9 @@ def mean_confidence_interval(data, confidence=0.95):
     m, se = np.mean(a), scipy.stats.sem(a)
     h = se * sp.stats.t._ppf((1+confidence)/2., n-1)
     if IS_SPEEDUP:
-        return m, m-h, m+h 
+        return m, m-h, m+h
     else:
-        return m, -h, h 
+        return m, -h, h
 
 
 def addtoresults(key, value):
@@ -133,7 +133,6 @@ def printtime():
 
     print "\\documentclass{standalone}"
     print ""
-    print "\\usepackage{graphicx}"
     print "\\usepackage{pgfplots}"
     print ""
     print "\\definecolor{darkgreen}{RGB}{0,104,0}"

@@ -49,7 +49,9 @@ def addtodict(dictx, model, time):
 def printstart():
     global ALG1, ALG2, WORKERS1, WORKERS2, minspeedup, maxspeedup, mintime, maxtime
     print "\documentclass{standalone}"
-    print "\usepackage{figstyle}"
+    print ""
+    print "\\usepackage{pgfplots}"
+    print ""
     #print "\pgfplotsset{myerr/.append style={mark=.,only marks,error bars/.cd, y dir=both,y explicit, x dir=both,x explicit} }"
     print "\pgfplotsset{myerr/.append style={mark=oplus,only marks} }"
     print ""
@@ -78,7 +80,7 @@ def printstart():
     print "    grid=both,"
     print "    legend pos=north west"
     print "]"
- 
+
 
 def printscatter(x, y, errorx, errory):
     #print "\\addplot[myerr] coordinates {{({},{}) +- ({},{})}};".format(x,y,errorx,errory)
