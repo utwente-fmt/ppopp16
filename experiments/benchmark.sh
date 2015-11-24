@@ -3,7 +3,7 @@
 # binaries
 BEEM_SCC="dve2lts-mc"
 SYNTHETIC_SCC="prom2lts-mc"
-OFFLINE_SCC="$scc"
+OFFLINE_SCC="scc"
 
 # variables
 TIMEOUT_TIME="600s" # 10 minutes timeout
