@@ -51,6 +51,7 @@ def printstart():
     print "\documentclass{standalone}"
     print ""
     print "\\usepackage{pgfplots}"
+    print "\\pgfplotsset{compat=1.9}"
     print ""
     #print "\pgfplotsset{myerr/.append style={mark=.,only marks,error bars/.cd, y dir=both,y explicit, x dir=both,x explicit} }"
     print "\pgfplotsset{myerr/.append style={mark=oplus,only marks} }"
@@ -68,7 +69,6 @@ def printstart():
         print "    ylabel={{Speedup for {} with {} workers}},".format(ALG2,WORKERS2)
     else:
         print "    ylabel={{Speedup for {} with {} worker}},".format(ALG2,WORKERS2)
-    print minspeedup, maxspeedup
     print "    xmin={}, ymin={},".format(mintime*0.8, minspeedup*0.8)
     print "    xmax={}, ymax={},".format(maxtime*1.2, maxspeedup*1.2)
     print "    ymode=log, log basis y={10},"

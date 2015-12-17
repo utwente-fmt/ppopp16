@@ -142,8 +142,6 @@ def printtime():
     print "\\newcommand{\DASHEDPLOT}{\\addplot[color=darkgray, mark=none, dashed]}"
     print "\\newcommand{\TARJANPLOT}{\\addplot[color=darkgreen, mark=none, thick,",
     print "error bars/.cd, y dir=both, y explicit, error bar style={thick}, error mark options={rotate=90,thick}]}"
-    print "\\newcommand{\TARJANPLOT} {\\addplot[color=darkgreen, mark=none, thick,",
-    print "error bars/.cd, y dir=both, y explicit, error bar style={thick}, error mark options={rotate=90,thick}]}"
     print "\\newcommand{\RENAULTPLOT}{\\addplot[color=red, mark=triangle*, thick,",
     print "error bars/.cd, y dir=both, y explicit, error bar style={thick}, error mark options={rotate=90,thick}]}"
     print "\\newcommand{\UFPLOT}     {\\addplot[color=blue, mark=oplus*, thick,",
@@ -247,7 +245,19 @@ def printspeedup(basis="tarjan", basisworkers="1"):
     calculatespeedup(basis, basisworkers)
     print "\\documentclass{standalone}"
     print ""
-    print "\\usepackage{figstyle}"
+    print "\\usepackage{pgfplots}"
+    print ""
+    print "\\definecolor{darkgreen}{RGB}{0,104,0}"
+    print "\\renewcommand{\\familydefault}{\\sfdefault}"
+    print "\\pgfplotsset{compat=1.9}"
+    print ""
+    print "\\newcommand{\DASHEDPLOT}{\\addplot[color=darkgray, mark=none, dashed]}"
+    print "\\newcommand{\TARJANPLOT}{\\addplot[color=darkgreen, mark=none, thick,",
+    print "error bars/.cd, y dir=both, y explicit, error bar style={thick}, error mark options={rotate=90,thick}]}"
+    print "\\newcommand{\RENAULTPLOT}{\\addplot[color=red, mark=triangle*, thick,",
+    print "error bars/.cd, y dir=both, y explicit, error bar style={thick}, error mark options={rotate=90,thick}]}"
+    print "\\newcommand{\UFPLOT}     {\\addplot[color=blue, mark=oplus*, thick,",
+    print "error bars/.cd, y dir=both, y explicit, error bar style={thick}, error mark options={rotate=90,thick}]}"
     print ""
     print "\\begin{document}"
     print "\\begin{tikzpicture}"
