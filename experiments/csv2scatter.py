@@ -97,6 +97,8 @@ def printscatterplot(dict1, dict2):
     global minspeedup, maxspeedup, mintime, maxtime
     # calculate minspeedup, maxspeedup
     for model in allmodels:
+        if (not model in dict1) or (not model in dict2):
+            continue
         mean_conf1 = mean_confidence_interval(dict1[model])
         mean_conf2 = mean_confidence_interval(dict2[model])
         speedup = mean_conf1[0]/mean_conf2[0]
@@ -107,6 +109,8 @@ def printscatterplot(dict1, dict2):
     printstart();
     geom = []
     for model in allmodels:
+        if (not model in dict1) or (not model in dict2):
+            continue
         mean_conf1 = mean_confidence_interval(dict1[model])
         mean_conf2 = mean_confidence_interval(dict2[model])
         geom.append(mean_conf1[0] / mean_conf2[0])
